@@ -44,5 +44,7 @@ namespace BoroPOS.Models
         public List<EmpleadoSucursal> EmpleadoSucursales { get; set; } = new();
         public List<Venta> Ventas { get; set; } = new();
         public List<Turno> Turnos { get; set; } = new();
+        public List<CorteCaja> CortesCaja { get; set; } = new();
+
     }
 }

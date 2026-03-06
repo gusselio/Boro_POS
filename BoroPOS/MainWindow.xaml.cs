@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using BoroPOS.Services;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,14 @@ namespace BoroPOS
         public MainWindow()
         {
             InitializeComponent();
+            ProbarConexion();
+        }
+
+        private void ProbarConexion()
+        {
+            var service = new NegocioService();
+            var negocios = service.ObtenerTodos();
+            MessageBox.Show($"Conexión exitosa. Negocios en BD: {negocios.Count}");
         }
     }
 }
