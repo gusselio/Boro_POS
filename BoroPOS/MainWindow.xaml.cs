@@ -20,14 +20,6 @@ namespace BoroPOS
         public MainWindow()
         {
             InitializeComponent();
-            ProbarConexion();
-        }
-
-        private void ProbarConexion()
-        {
-            var service = new NegocioService();
-            var negocios = service.ObtenerTodos();
-            MessageBox.Show($"Conexión exitosa. Negocios en BD: {negocios.Count}");
         }
     }
 }
