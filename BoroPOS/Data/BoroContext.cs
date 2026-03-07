@@ -21,6 +21,7 @@ namespace BoroPOS.Data
         public DbSet<IngredienteAlmacen> IngredienteAlmacenes { get; set; }
         public DbSet<MovimientoAlmacen> MovimientosAlmacen { get; set; }
         public DbSet<Receta> Recetas { get; set; }
+        public DbSet<Terminal> Terminales { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
@@ -41,9 +42,15 @@ namespace BoroPOS.Data
         {
             // Decirle a EF que CorteCaja tiene DOS relaciones con Empleado
             modelBuilder.Entity<CorteCaja>()
-                .HasOne(c => c.Empleado)
-                .WithMany(e => e.CortesCaja)
-                .HasForeignKey(c => c.EmpleadoId)
+                .HasOne(c => c.EmpleadoApertura)
+                .WithMany()
+                .HasForeignKey(c => c.EmpleadoAperturaId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<CorteCaja>()
+                .HasOne(c => c.EmpleadoCierre)
+                .WithMany()
+                .HasForeignKey(c => c.EmpleadoCierreId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<CorteCaja>()

@@ -8,9 +8,10 @@ namespace BoroPOS.Models
     {
         public int Id { get; set; }
         public int SucursalId { get; set; }
-        public int EmpleadoId { get; set; }
+        public int TerminalId { get; set; }
         public string Turno { get; set; } = "mañana"; // mañana, tarde
-
+        public int EmpleadoAperturaId { get; set; }
+        public int? EmpleadoCierreId { get; set; }
         //Fondo
         public decimal FondoInicial { get; set; } = 0m;
         public decimal FondoSiguiente { get; set; } = 0m;
@@ -39,8 +40,10 @@ namespace BoroPOS.Models
         public DateTime? CerradoEn { get; set; }
 
         //Relaciones
+        public Terminal Terminal { get; set; } = new();
         public Sucursal Sucursal { get; set; } = new();
-        public Empleado Empleado { get; set; } = new();
+        public Empleado EmpleadoApertura { get; set; } = new();
+        public Empleado? EmpleadoCierre { get; set; }
         public Empleado? EmpleadoCierreForzado { get; set; }
     }
 }
