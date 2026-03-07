@@ -10,6 +10,7 @@ namespace BoroPOS.Models
         public int SucursalId { get; set; }
         public string Nombre { get; set; } = string.Empty;
         public string? Descripcion { get; set; }
+        public string Tema { get; set; } = "light"; // light, dark
         public bool Activo { get; set; } = true;
         public DateTime CreadoEn { get; set; } = DateTime.Now;
 
