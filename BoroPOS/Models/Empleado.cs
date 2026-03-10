@@ -12,7 +12,8 @@ namespace BoroPOS.Models
         public string Apellido { get; set; } = string.Empty;
         public string Pin { get; set; } = string.Empty;
         public string Rol { get; set; } = "cajero";
-        
+        public string? EmpleadoId { get; set; }
+
         //Datos Laborales
         public DateTime? FechaIngreso { get; set; }
         public string? NumeroSeguroSocial { get; set; }

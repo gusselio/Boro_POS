@@ -10,9 +10,6 @@
 
   <ItemGroup>
     <None Remove="Views\Gemini_Generated_Image_cp55p3cp55p3cp55.png" />
-    <None Remove="Views\Gemini_Generated_Image_f51bwwf51bwwf51b.png" />
-    <None Remove="Views\Gemini_Generated_Image_xyfszfxyfszfxyfs.png" />
-    <None Remove="Views\images.jpeg" />
     <None Remove="Views\IMG_4756.jpg" />
   </ItemGroup>
 
@@ -29,9 +26,6 @@
 
   <ItemGroup>
     <Resource Include="Views\Gemini_Generated_Image_cp55p3cp55p3cp55.png" />
-    <Resource Include="Views\Gemini_Generated_Image_f51bwwf51bwwf51b.png" />
-    <Resource Include="Views\Gemini_Generated_Image_xyfszfxyfszfxyfs.png" />
-    <Resource Include="Views\images.jpeg" />
     <Resource Include="Views\IMG_4756.jpg" />
   </ItemGroup>
 
