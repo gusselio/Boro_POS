@@ -93,6 +93,32 @@
                                     <PathGeometry Figures="M186.5 0H0V255C0 260.523 4.47717 265 10 265H266.085C267.883 265 269.56 264.009 270.438 262.44C306.51 197.989 306.758 159.701 288 137C268.994 114 233 104.5 201 67.5C183.598 47.3784 177.644 11.3333 186.5 0Z" FillRule="NonZero"/>
                                 </Path.Data>
                             </Path>
+                            <Border CornerRadius="20" 
+                                Width="186" 
+                                Height="259" Canvas.Left="10" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="-9" RenderTransformOrigin="0.38,0.532">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/Views/IMG_4756.jpg" 
+                                        Stretch="UniformToFill"/>
+                                </Border.Background>
+                            </Border>
+                            <Border CornerRadius="20" 
+                                Width="90" 
+                                Height="153" Canvas.Left="178" Canvas.Top="122" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                                <Border.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform AngleY="-0.381"/>
+                                        <RotateTransform/>
+                                        <TranslateTransform Y="0.299"/>
+                                    </TransformGroup>
+                                </Border.RenderTransform>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/Views/Gemini_Generated_Image_cp55p3cp55p3cp55.png" 
+                                        Stretch="UniformToFill"/>
+                                </Border.Background>
+                            </Border>
+
+
                         </Canvas>
                     </Viewbox>
                 </Grid>
@@ -100,7 +126,9 @@
             <Button  Content="ENTRAR" Margin="981,237,88,272" Grid.Row="1" Style="{StaticResource BotonRedondeado}" FontFamily="Bahnschrift" FontSize="25"/>
             <Border Grid.Row="0"
                     Background="White"
-                    MouseDown="BarraTitulo_MouseDown" Margin="10,10,-10,555" Grid.RowSpan="2">
+                    MouseDown="BarraTitulo_MouseDown" 
+                    Margin="10,10,-10,555" 
+                    Grid.RowSpan="2">
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Right">
                     <Button Content="—" Width="35" Height="35"
@@ -109,6 +137,7 @@
                             Click="Cerrar_Click"/>
                 </StackPanel>
             </Border>
+            <Label Content="© 2026 Boro POS" HorizontalAlignment="Left" Margin="23,539,0,0" Grid.Row="1" VerticalAlignment="Top"/>
 
         </Grid>
     </Border>
