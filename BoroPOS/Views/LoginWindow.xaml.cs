@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BoroPOS.Services;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -43,11 +44,6 @@ namespace BoroPOS.Views
             Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private bool passwordVisible = false;
 
         private void MostrarPassword_Click(object sender, RoutedEventArgs e)
@@ -66,6 +62,29 @@ namespace BoroPOS.Views
                 txtPasswordOculto.Visibility = Visibility.Visible;
                 passwordVisible = false;
             }
+        }
+
+        private void Entrar_Click(object sender, RoutedEventArgs e)
+        {
+            var empleadoId = txtEmpleadoId.Text;
+            var pin = txtPasswordOculto.Password;
+
+            if (string.IsNullOrEmpty(empleadoId) || string.IsNullOrEmpty(pin)) 
+            {
+                MessageBox.Show("Por Favor ingresa tu Empleado ID y tu PIN");
+                return;
+            }
+
+            var service = new EmpleadoService();
+            var empleado = service.BuscarPorCredenciales(empleadoId, pin);
+
+            if (empleado == null)
+            {
+                MessageBox.Show("Empleado ID o PIN incorrectos.");
+                return;
+            }
+
+            MessageBox.Show($"Bienvenido, {empleado.Nombre}!");
         }
     }
 }

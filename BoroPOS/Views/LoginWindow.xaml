@@ -42,7 +42,7 @@
                 <Border CornerRadius="5"
                     Background="White"
                     Padding="10,0" Margin="258,177,248,357" Grid.Column="1">
-                    <TextBox 
+                    <TextBox x:Name="txtEmpleadoId"
                         PreviewTextInput="SoloNumeros"
                         BorderThickness="0"
                         Background="White"
@@ -95,7 +95,7 @@
                             </Path>
                             <Border CornerRadius="20" 
                                 Width="186" 
-                                Height="259" Canvas.Left="10" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="-9" RenderTransformOrigin="0.38,0.532">
+                                Height="259" Canvas.Left="7" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="-9" RenderTransformOrigin="0.38,0.532">
                                 <Border.Background>
                                     <ImageBrush ImageSource="/Views/IMG_4756.jpg" 
                                         Stretch="UniformToFill"/>
@@ -123,7 +123,14 @@
                     </Viewbox>
                 </Grid>
             </Grid>
-            <Button  Content="ENTRAR" Margin="981,237,88,272" Grid.Row="1" Style="{StaticResource BotonRedondeado}" FontFamily="Bahnschrift" FontSize="25"/>
+            <Button  
+                Content="ENTRAR" 
+                Margin="981,237,88,272" 
+                Grid.Row="1" 
+                Style="{StaticResource BotonRedondeado}" 
+                FontFamily="Bahnschrift" 
+                FontSize="25" 
+                Click="Entrar_Click"/>
             <Border Grid.Row="0"
                     Background="White"
                     MouseDown="BarraTitulo_MouseDown" 
