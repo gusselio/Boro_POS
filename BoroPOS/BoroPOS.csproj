@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\BOROLogo.png" />
+    <None Remove="Assets\HistoryIcon.png" />
+    <None Remove="Assets\HomeIcon.png" />
+    <None Remove="Assets\MenuIcon.png" />
+    <None Remove="Assets\OrderIcon.png" />
     <None Remove="Views\Gemini_Generated_Image_cp55p3cp55p3cp55.png" />
     <None Remove="Views\IMG_4756.jpg" />
   </ItemGroup>
@@ -25,6 +30,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\BOROLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\HistoryIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\HomeIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\MenuIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\OrderIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Views\Gemini_Generated_Image_cp55p3cp55p3cp55.png" />
     <Resource Include="Views\IMG_4756.jpg" />
   </ItemGroup>

@@ -44,5 +44,41 @@
             </Setter>
         </Style>
 
+        <Style x:Key="BotonNav" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Padding" Value="15,12"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="borde"
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="8"
+                        Padding="{TemplateBinding Padding}">
+                            <ContentPresenter x:Name="contenido"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+
+                            <!-- Mouse encima → color naranja -->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="borde" Property="Background" Value="#FFF3E0"/>
+                                <Setter Property="Foreground" Value="#FFA16C"/>
+                            </Trigger>
+
+                            <!-- Botón presionado → color más intenso -->
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="borde" Property="Background" Value="#FFE0B2"/>
+                                <Setter Property="Foreground" Value="#FF7043"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Application.Resources>
 </Application>
